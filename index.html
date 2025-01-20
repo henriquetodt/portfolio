@@ -155,13 +155,22 @@
         }
 
         .case-image {
-            width: 100%;
-            height: 200px;
-            background: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .case-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .case-link:hover .case-image img {
+        transform: scale(1.05);
+    }
 
         .case-content {
             padding: 1.5rem;
@@ -257,13 +266,13 @@
     <div class="fixed-header">
         <div class="fixed-header-content">
             <div class="fixed-social-icons">
-                <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" class="fixed-social-link" title="LinkedIn">
+                <a href="https://linkedin.com/in/luizhenriquetodt" target="_blank" rel="noopener noreferrer" class="nav-link" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="fixed-social-link" title="WhatsApp">
+                <a href="https://wa.me/5551996929232" target="_blank" rel="noopener noreferrer" class="nav-link" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="mailto:seu.email@exemplo.com" class="fixed-social-link" title="Email">
+                <a href="mailto:henriquetodt@gmail.com" class="nav-link" title="Email">
                     <i class="far fa-envelope"></i>
                 </a>
             </div>
@@ -278,13 +287,15 @@
     <main class="container">
         <section class="intro" data-aos="fade-up">
             <h2>PORTFÓLIO</h2>
-            <p>Explore meus projetos mais destacados em Análise de Dados clicando nos links abaixo!</p>
+            <p>Explore meus projetos mais destacados em Análise de Dados nos links abaixo!</p>
         </section>
 
         <section class="cases-grid">
             <a href="case-otimizacao-vendas.html" class="case-link" data-aos="fade-up">
                 <article class="case-card">
-                    <div class="case-image">Dashboard Analytics</div>
+                    <div class="case-image">
+                        <img src="img/dashboard.jpg" alt="Dashboard de Analytics">
+                    </div>
                     <div class="case-content">
                         <h3 class="case-title">Otimização de Vendas</h3>
                         <p class="case-description">Análise completa do funil de vendas identificando pontos de melhoria e oportunidades de crescimento.</p>
@@ -299,7 +310,9 @@
 
             <a href="case-previsao-demanda.html" class="case-link" data-aos="fade-up" data-aos-delay="100">
                 <article class="case-card">
-                    <div class="case-image">Previsão de Demanda</div>
+                    <div class="case-image">
+                        <img src="img/dashboard.jpg" alt="Previsão de demanda">
+                    </div>
                     <div class="case-content">
                         <h3 class="case-title">Análise Preditiva</h3>
                         <p class="case-description">Desenvolvimento de modelo de machine learning para previsão de demanda com 95% de acurácia.</p>
@@ -314,7 +327,9 @@
 
             <a href="case-dashboard.html" class="case-link" data-aos="fade-up" data-aos-delay="200">
                 <article class="case-card">
-                    <div class="case-image">Business Intelligence</div>
+                    <div class="case-image">
+                        <img src="img/dashboard.jpg" alt="Business Intelligence">
+                    </div>
                     <div class="case-content">
                         <h3 class="case-title">Dashboard Executivo</h3>
                         <p class="case-description">Criação de dashboard executivo para acompanhamento de KPIs em tempo real.</p>
@@ -330,13 +345,13 @@
 
         <section class="contact">
             <div class="social-icons">
-                <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                <a href="https://linkedin.com/in/luizhenriquetodt" target="_blank" rel="noopener noreferrer" class="nav-link" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp">
+                <a href="https://wa.me/5551996929232" target="_blank" rel="noopener noreferrer" class="nav-link" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="mailto:seu.email@exemplo.com" class="social-link" title="Email">
+                <a href="mailto:henriquetodt@gmail.com" class="nav-link" title="Email">
                     <i class="far fa-envelope"></i>
                 </a>
             </div>
