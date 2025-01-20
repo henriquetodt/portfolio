@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study - Otimização de Vendas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,15 +18,34 @@
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
+            padding-top: 60px; /* Espaço para o header fixo */
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 0.8rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 1.5rem;
         }
 
         .header {
             background-color: #fff;
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: relative;
-            overflow: hidden;
         }
 
         .header-content {
@@ -33,22 +53,29 @@
             margin: 0 auto;
         }
 
-        .back-button {
-            position: absolute;
-            left: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            text-decoration: none;
-            color: #666;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
+        }
+
+        .nav-link {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #f5f5f5;
+        }
+
+        .nav-link:hover {
+            background: #2c3e50;
+            color: #fff;
+            transform: translateY(-2px);
         }
 
         .case-meta {
@@ -144,18 +171,65 @@
             color: #666;
         }
 
+        footer {
+            background: #fff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            margin-top: 4rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f5f5f5;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: #2c3e50;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .social-link i {
+            font-size: 1.5rem;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
             }
             
-            h1 {
-                font-size: 2rem;
-            }
-            
             .case-meta {
                 flex-direction: column;
                 gap: 1rem;
+            }
+            
+            .social-icons {
+                gap: 1rem;
+            }
+
+            .fixed-header {
+                padding: 0.8rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
             }
             
             .back-button {
@@ -167,21 +241,37 @@
             
             .case-image {
                 height: 250px;
-            }
         }
+    }
     </style>
 </head>
 <body>
-    <header class="header" data-aos="fade-down">
-        <a href="index.html" class="back-button">← Voltar</a>
-        <div class="header-content">
+    <nav class="fixed-header">
+        <a href="index.html" class="nav-link" title="Página Inicial">
+            <i class="fas fa-home"></i>
+        </a>
+        <div class="header-icons">
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" class="nav-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="nav-link" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:seu.email@exemplo.com" class="nav-link" title="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content" data-aos="fade-down">
             <h1>Otimização de Vendas</h1>
             <p>Análise de Dados para Crescimento de Receita</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="case-meta" data-aos="fade-up">
+        <section class="case-meta" data-aos="fade-up" data-aos-delay="100">
             <div class="meta-item">
                 <div class="meta-label">Duração</div>
                 <div class="meta-value">3 meses</div>
@@ -200,12 +290,12 @@
             <h2>Visão Geral</h2>
             <p>Este projeto focou na análise detalhada do comportamento de vendas de uma empresa de e-commerce, identificando gargalos e oportunidades de otimização no funil de conversão.</p>
             
-            <div class="image-container" data-aos="fade-up">
+            <div class="image-container" data-aos="fade-up" data-aos-delay="100">
                 <div class="case-image">Gráfico de Funil de Vendas</div>
             </div>
 
-            <h2>Desafio</h2>
-            <p>A empresa enfrentava uma taxa de conversão abaixo do mercado e precisava entender os pontos de atrito no processo de compra para melhorar seus resultados.</p>
+            <h2 data-aos="fade-up">Desafio</h2>
+            <p data-aos="fade-up" data-aos-delay="100">A empresa enfrentava uma taxa de conversão abaixo do mercado e precisava entender os pontos de atrito no processo de compra para melhorar seus resultados.</p>
         </section>
 
         <section class="content-section" data-aos="fade-up">
@@ -244,8 +334,26 @@
         AOS.init({
             duration: 800,
             offset: 100,
-            once: true
+            once: true,
+            easing: 'ease-out-cubic'
         });
     </script>
+
+    <footer>
+        <div class="social-icons" data-aos="fade-up">
+            <a href="index.html" class="social-link" title="Página Inicial">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:seu.email@exemplo.com" class="social-link" title="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </footer>    
 </body>
 </html>
