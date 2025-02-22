@@ -7,6 +7,7 @@
     --color-primary: #333333;
     --color-secondary: #007BFF;
     --color-background1: #F9F9F9;
+    --color-background2: #fdfdfd;
     --font-size-title: 2rem;
     --font-size-subtitle: 1.5rem;
     --font-size-text: 1rem;
@@ -58,7 +59,7 @@ body {
 .header {
     font-family: var(--font-secondary);
     font-weight: var(--font-weight2);
-    background-color: #e0e0e0;
+    background-color: var(--color-background2);
     padding: 4rem 2rem 2rem 2rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -230,6 +231,20 @@ overflow: hidden;
 position: relative;
 }
 
+.case-image-cases {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    }
+
+.case-image-cases img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    height: 100%; /* Altura é ajustada automaticamente */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+    display: block; /* Remove espaçamentos indesejados abaixo da imagem */
+}
+
 .case-image img {
 width: 100%;
 height: 100%;
@@ -346,4 +361,80 @@ transition: transform 0.3s ease;
 .hover-image:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.meta-item {
+    text-align: center;
+}
+
+.meta-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.meta-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.result-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    color: #666;
+}
+
+.image-container {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.case-image {
+    width: 100%;
+    height: 200px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.content-section {
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.case-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
