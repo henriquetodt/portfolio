@@ -483,8 +483,8 @@ transition: transform 0.3s ease;
 /* Conteúdo do modal */
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: auto;
 }
 
 /* Botão de fechar */
@@ -503,4 +503,26 @@ transition: transform 0.3s ease;
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* Estilo do texto de disclaimer */
+.disclaimer {
+    font-style: italic; /* Deixa o texto em itálico */
+    font-size: 0.9rem; /* Tamanho menor para o texto */
+    color: #666; /* Cor mais suave para indicar uma observação */
+    margin-top: 0; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilo do link destacado */
+.highlight-link {
+    font-weight: bold; /* Negrito */
+    color: #2c3e50; /* Cor azul para o link */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Alteração de cor no hover */
+.highlight-link:hover {
+    color: #9B4848; /* Cor da seta */
+    ; /* Altera para laranja ao passar o mouse */
 }
